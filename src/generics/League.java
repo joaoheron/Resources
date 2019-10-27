@@ -20,7 +20,8 @@ public class League<T extends Team> {
 	}
 	
 	public void showLeagueTable() {
-		Collections.sort(league); // Team implements comparable, entao podemos usar o sort
+		// Team implements comparable, so we can use sort()
+		Collections.sort(league);
 		for(T t : league) {
 			System.out.println(t.getName() + " " + t.ranking());
 		}

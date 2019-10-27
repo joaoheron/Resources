@@ -3,25 +3,23 @@ package interfaces;
 import java.util.List;
 
 public interface ITelephone {
-	// Define os metodos que serao implementados nas classes que implements this interface
-	// Podemos criar metodos que tratam classes que implementam a interface ITelephone, sem saber quais sao essas classes
-	// Faz apenas declaracoes, nao faz implementacoes
-	// Todos metodos sao automaticamente public abstract
-	// declara variaveis apenas static e final
-	// Nao suporta construtores
+	// Interfaces:
+	// Define the methods which will be implemented in the classes that implement this interface
+	// Only do declarations, not implementations (depends of which java version is running)
+	// All methods are "public abstract" by default
+	// All variables are "static final" by default
+	// Does not allow constructors
 	
-	static final long constante = 1111L;
-	List write(); // nao precisa especificar qual tipo de lista(arraylist, linkedlist)
-	// e nem do que esta lista eh composta (<String>, <Phone>, etc)
+	static final long constant = 1111L;
+	List write();
 	void powerOn();
 	void dial(int phoneNumber);
 	void answer();
 	boolean callPhone(int PhoneNumber);
 	boolean isRinging();
-	
-	// a partir do java 8 interfaces podem ter DEFAULT methods, que sao implementados dentro dela mesma
+	// from java 8 and on we can have DEFAULT methods on the interface, those can be implemented inside the interface class
 	default boolean retornaTrue() {
 		return true;
 	}
-	// a partir do java 9 interfaces podem ter private methods
+	// from java 9 and on interfaces can have private methods
 }

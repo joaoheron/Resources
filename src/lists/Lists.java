@@ -5,19 +5,18 @@ import java.util.LinkedList;
 
 public class Lists {
 	
-	// Arraylist
+	// LinkedLists are more performative than Arraylists. When we remove an element from an LinkedList, 
+	// the previous index will point to the next index of the removed element
 	
-	// LinkedList
-	// Mais perfomartico, para remover um item da lista ele faz o item anterior apontar para o item seguinte, etc
 	private static void printLinked(LinkedList<String> linkedList) {
-		LinkedList<String> placesToVisit = new LinkedList<String>();
-		placesToVisit.add("Somalia");
-		placesToVisit.add("Marrocos");
-		placesToVisit.add("Berlim");
-		placesToVisit.add("Polonia");
-		placesToVisit.add("Camboja");
-		placesToVisit.add("Africa do Sul");
-		placesToVisit.add("Dinamarca");
+		LinkedList<String> citiesToVisit = new LinkedList<String>();
+		citiesToVisit.add("Rio");
+		citiesToVisit.add("Sao Paulo");
+		citiesToVisit.add("Munchen");
+		citiesToVisit.add("Dallas");
+		citiesToVisit.add("Mexico City");
+		citiesToVisit.add("Cape Town");
+		citiesToVisit.add("Copenhagen");
 
 		
 		Iterator <String> i = linkedList.iterator();

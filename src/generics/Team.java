@@ -2,11 +2,12 @@ package generics;
 
 import java.util.ArrayList;
 
-/* Precisamos implementar uma classe T que possui uma lista de P.
- * É necessário que esta lista de P seja composta de uma especialização específica de P
- * Não devemos deixar que outra especialização de P seja usada para compor a lista de P
- * Para problemas similares, o conceito de Generics pode ser utilizado
+/* We need to implement a class T that has a list of P
+ * Its necessary that this list of P is composed of a specific specialization of P
+ * We should not use other P specialization to compose the list
+ * For similar problems we should use the Generics concept
  */
+
 public class Team<P extends Player> implements Comparable<Team <P>> {
 	
     private String name;
@@ -26,11 +27,11 @@ public class Team<P extends Player> implements Comparable<Team <P>> {
 
     public boolean addPlayer(P player) {
         if (members.contains(player)) {
-            System.out.println(player.getName() + " já está neste time.");
+            System.out.println(player.getName() + " is already on the team.");
             return false;
         } else {
             members.add(player);
-            System.out.println(player.getName() + " contratado pelo time " + this.name);
+            System.out.println(player.getName() + " hired by " + this.name);
             return true;
         }
     }
